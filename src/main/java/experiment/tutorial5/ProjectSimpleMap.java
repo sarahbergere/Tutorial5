@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+//This is where we store the map of Projects and where we can modify them via methods
 public class ProjectSimpleMap implements ProjectLookupService {
     private Map<String, Project> projects;
 

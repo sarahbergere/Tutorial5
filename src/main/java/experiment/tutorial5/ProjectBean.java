@@ -49,7 +49,7 @@ public class ProjectBean {
         this.projectId = projectId;
     }
 
-    public boolean validateProject() {
+    public boolean validateProject() {   //do some back-end verification
         return project != null && project.getId() != null
                 && project.getTitle() != null && !project.getTitle().isEmpty()
                 && project.getDescription() != null && !project.getDescription().isEmpty()
@@ -60,9 +60,9 @@ public class ProjectBean {
     public String saveProject() {
         if (validateProject()) {
             lookupService.saveProject(project);
-            return "project?faces-redirect=true&p=" + projectId;  //redirecting to the page where the informations will be displayed
+            return "project?faces-redirect=true&p=" + projectId;  //redirecting to the page where the new informations will be displayed
         } else {
-            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Please fill the required fields."));
+            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Please fill the required fields."));  //there is an issue so we stay on the edit page
             return "editProject?faces-redirect=true&p=" + projectId;
         }
     }

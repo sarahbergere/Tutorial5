@@ -1,5 +1,6 @@
 package experiment.tutorial5;
 
+// This is the class Project where we state each attributs
 public class Project {
     private String id;
     private String title;

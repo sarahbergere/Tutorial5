@@ -4,7 +4,7 @@ $(document).ready(function() {
     $('#editForm\\:titleInput').on('input', function() {
         var inputValue = $(this).val();
         console.log('Input value:', inputValue);
-        $('#titleDiv').find('h3').text(inputValue);
+        $('#titleDiv').find('h2').text(inputValue);
     });
 
     $('#editForm\\:description, #editForm\\:myPart, #editForm\\:learned').on('input', function() {
